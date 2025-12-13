@@ -1,2 +1,6 @@
 1|Ricardo|Analise
 2|Fulano|Tecnico em enfermagem
+1|Ricardo|Curso 1
+2|Luiza|Curso teste 2
+1|Ricardo|Curso teste 1
+1|Ricardo|Curso teste 1

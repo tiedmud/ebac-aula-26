@@ -1,10 +1,9 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
+import java.io.File;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -12,6 +11,9 @@ public class Main {
         Operacoes op = new Operacoes();
 
         String operacao = "";
+
+        List<Aluno> listaAluno = new ArrayList<Aluno>();
+        GeradorTxt geradorTxt = null;
 
         do {
             System.out.printf("Digite a operação:\n1 - Adicionar aluno\n2 - Buscar aluno\n3 - Sair\n");
@@ -29,6 +31,10 @@ public class Main {
                     aluno.setMatricula(matricula);
                     aluno.setNome(nome);
                     aluno.setCurso(curso);
+
+                    geradorTxt = new GeradorTxt();
+                    GeradorTxt.gerarArquivo(aluno, "alunos.xml");
+
                     op.adicionarAluno(aluno);
                     break;
 
@@ -46,6 +52,5 @@ public class Main {
                 break;
             }
         } while(operacao.equals("1") || operacao.equals("2"));
-
     }
 }
